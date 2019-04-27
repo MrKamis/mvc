@@ -15,4 +15,6 @@
     <h4>How to use AJAX</h4>
     <p>Send javascript ajax request to ajax/type.</p>
     <p>Then creates files in app/ajax, which they ll be use to control ajax request</p>
+    <p>New file ajax.php is created, because it's not contain html tag with all structure!</p>
+    <p>Also it's send header text/plain</p>
 </div>
