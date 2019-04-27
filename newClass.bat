@@ -16,3 +16,6 @@ ECHO %tab%%tab%%tab%echo '%className%Controller works!';>>%className%Controller.
 ECHO %tab%%tab%^}>>%className%Controller.php
 ECHO %tab%^}>>%className%Controller.php
 ECHO ?^>>>%className%Controller.php
+CD ./../..
+START .\newModel.bat %className%
+EXIT

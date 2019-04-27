@@ -13,3 +13,4 @@ ECHO %tab%require_once 'model.php';>> %modelName%Model.php
 ECHO %tab%class %modelName%Model extends Model ^{>> %modelName%Model.php
 ECHO %tab%^}>>%modelName%Model.php
 ECHO ?^>>>%modelName%Model.php
+EXIT
