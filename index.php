@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="HERE's SHOULD BE DESCRIPTION OF PAGE - IT'S SHOW AT BROWSER PAGE!">
+    <meta name="robots" content="index">
     <title>template</title>
     <base href="\">
     <link href="/public/stylesheets/bootstrap.min.css" rel="stylesheet">
