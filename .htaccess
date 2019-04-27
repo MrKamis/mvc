@@ -1,5 +1,6 @@
 Options FollowSymLinks
 RewriteEngine on
+RewriteRule ^ajax/([a-zA-Z0-9]+)$ ajax.php?type=$1 [L]
 RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/([a-zA-Z0-9]+)$ index.php?controller=$1&method=$2&params=$3 [L]
 RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)$ index.php?controller=$1&method=$2 [L]
 RewriteRule ^([a-zA-Z]+)$ index.php?controller=$1 [L]
