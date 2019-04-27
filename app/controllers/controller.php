@@ -35,10 +35,19 @@
         /**
          * Loads view. 
          * Views should have .phtml
-         * @param any $params Any data to loads to view
+         * @param string $title Title of page on <title>
+         * @param array<any> $data It's what be showed
+         * @param string $description It's description of page - on meta tag
          * @return void
          */
-        protected function loadView($params = false) {
+        protected function loadView($title = false, $data = [], $description = false) {
+            require_once __DIR__ . '/../config/defaultTag.php';
+            if (!$title) {
+                $title = DefaultTags::$title;
+            }
+            if (!$description) {
+                $description = DefaultTags::$description;
+            }
             if (file_exists(__DIR__ . '/../views/' . str_replace('Controller', '', get_class($this)) . 'View.phtml')) {
                 require_once __DIR__ . '/../views/' . str_replace('Controller', '', get_class($this)) . 'View.phtml';
             } else {
