@@ -18,7 +18,16 @@
                     $controllerName = $get['controller'] . 'Controller';
                     $controller = new $controllerName();
                     $method = $get['method'];
-                    $controller->$method($get['params']);
+                    if (method_exists($controller, $method)) {
+                        $reflection = new ReflectionMethod($controller, $method);
+                        if ($reflection->isPublic()) {
+                            $controller->$method($get['params']);
+                        } else {
+                            $controller->index($get['params']);
+                        }
+                    } else {
+                        $controller->index($get['params']);
+                    }
                     return true;
                 } else {
                     self::errorPage();
@@ -30,7 +39,16 @@
                     $controllerName = $get['controller'] . 'Controller';
                     $controller = new $controllerName();
                     $method = $get['method'];
-                    $controller->$method();
+                    if (method_exists($controller, $method)) {
+                        $reflection = new ReflectionMethod($controller, $method);
+                        if ($reflection->isPublic()) {
+                            $controller->$method();
+                        } else {
+                            $controller->index();
+                        }
+                    } else {
+                        $controller->index();
+                    }
                     return true;
                 } else {
                     self::errorPage();
