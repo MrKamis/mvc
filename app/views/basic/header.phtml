@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../config/defaultTag.php'; ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -6,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="<?php echo $description; ?>">
     <meta name="robots" content="index">
-    <title><?php echo $title; ?></title>
+    <title><?php echo isset($title) ? $title : DefaultTags::$title; ?></title>
     <base href="\">
     <link href="/public/stylesheets/bootstrap.min.css" rel="stylesheet">
     <link href="/public/stylesheets/main.css" rel="stylesheet">

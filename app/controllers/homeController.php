@@ -2,7 +2,7 @@
     require_once 'controller.php';
     class homeController extends Controller {
         public function index() {
-            $this->loadView('Home View', [], 'Description');
+            $this->loadView('Title', [], 'Description');
         }
     }
 ?>

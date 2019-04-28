@@ -40,14 +40,7 @@
          * @param string $description It's description of page - on meta tag
          * @return void
          */
-        protected function loadView($title = false, $data = [], $description = false) {
-            require_once __DIR__ . '/../config/defaultTag.php';
-            if (!$title) {
-                $title = DefaultTags::$title;
-            }
-            if (!$description) {
-                $description = DefaultTags::$description;
-            }
+        protected function loadView($title = null, $data = [], $description = null) {
             if (file_exists(__DIR__ . '/../views/' . str_replace('Controller', '', get_class($this)) . 'View.phtml')) {
                 require_once __DIR__ . '/../views/' . str_replace('Controller', '', get_class($this)) . 'View.phtml';
             } else {
