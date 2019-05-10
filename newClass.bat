@@ -12,7 +12,7 @@ ECHO ^<?php >%className%Controller.php
 ECHO %tab%require_once 'controller.php';>> %className%Controller.php
 ECHO %tab%class %className%Controller extends Controller ^{>> %className%Controller.php
 ECHO %tab%%tab%public function index() ^{>>%className%Controller.php
-ECHO %tab%%tab%%tab%$this-^>loadView();>>%className%Controller.php
+ECHO %tab%%tab%%tab%$this-^>loadViewBasic();>>%className%Controller.php
 ECHO %tab%%tab%^}>>%className%Controller.php
 ECHO %tab%^}>>%className%Controller.php
 ECHO ?^>>>%className%Controller.php
